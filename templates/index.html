@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAHARI HOME SOLUTION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="static/Profile.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+
+
+<body>
+    <nav class=" short navbar bg-dark navbar-expand-lg bg-body-tertiar" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: #0efa51;" href="#">More about us</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item" onclick="HOME()">
+                    <p class="nav-link s_color0" aria-current="page">Home</p>
+                </li>
+                <li class="nav-item s_color1" onclick="s_project()">
+                    <p class="nav-link">Services</p>
+                </li>
+                <li class="nav-item s_color2" onclick="s_skill()">
+                    <p class="nav-link">About Us</p>
+                </li>
+                <li class="nav-item s_color3" onclick="s_contact()">
+                    <p class="nav-link">Contact Us</p>
+                </li>
+                <li class="nav-item s_color3">
+                    <a href="/adminlogin"><li id="contactbtn2"><button class="btn btn-primary">Admin login</button></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hide">
+    <div class="cantainar">
+        <img class="menu" src="static/menu.png" alt="">
+        <div class="saidbar">
+            <img class="close" src="static/close.png" alt="">
+            <div class="Manue">
+                <ul>
+                    <li id="home">Home</li>
+                    <li id="project">Services</li>
+                    <li id="myskill">About Us</li>
+                    <li id="contactbtn">Contact Us
+                    </li>
+                    <a href="/adminlogin"><li id="contactbtn1"><button class="btn btn-primary">Admin login</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="info">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div  class="alert gg alert-success alert-dismissible fade show" role="alert">
+                        {% for message in messages %}
+                            <h4>{{ message }}</h4>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% endwith %}
+                    <h1><span id="name">PAHARI HOME SOLUTION</span></h1>
+                    <h1><span id="skill"></span><span class="cursor">|</span> </h1>
+                    <div class="myinfo">Pahari Home Solutions is one of the existing companies that deals with real
+                        estate and home services. They mainly specialize in affording people decent accommodation
+                        options especially for the populace in need of shelter for themselves and their families, with
+                        core focuses on customer satisfaction and genuine service provisions. The company is presumably
+                        running the business with the goal of assisting individuals with the search of their dream homes
+                        and offer professional service in the field of real estate.
+                    </div>
+                    <div class="parsonal">
+                        <a href="https://github.com/paharihomesolutions" target="_blank"><lord-icon
+                                src="https://cdn.lordicon.com/uvqdhrsk.json" trigger="loop" delay="2000"
+                                colors="primary:#66ee78,secondary:#ffffff" class="parsonal_details">
+                            </lord-icon></a>
+                        <a href="https://www.linkedin.com/company/paharihomesolutions/posts/?feedView=all"
+                            target="_blank"><lord-icon class="parsonal_details"
+                                colors="primary:#ffffff,secondary:#ffffff" src="https://cdn.lordicon.com/mdyiqybm.json"
+                                trigger="loop">
+                            </lord-icon> </a>
+                        <lord-icon src="https://cdn.lordicon.com/ewswvzmw.json" trigger="loop" delay="2000"
+                            state="hover-rotate" colors="primary:#ffffff,secondary:#ffffff" class="parsonal_details">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/lhscugaw.json" trigger="loop" delay="2000"
+                            colors="primary:#ffffff,secondary:#ffffff" class="parsonal_details">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/iqagrlso.json" trigger="loop" delay="2000"
+                            state="hover-roll" colors="primary:#ffffff,secondary:#ffffff" class="parsonal_details">
+                        </lord-icon>
+                    </div>
+                </div>
+
+                <div class="setheight">
+                    <div class="pic">
+                        <img id="mypic" src="static/Profile.png" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="discription">
+                    Pahari Home Solutions is a company focused on providing home improvement, renovation, and
+                    maintenance services, especially tailored to meet the needs of mountainous and hilly regions. They
+                    specialize in building sustainable and environment-friendly homes that can withstand the unique
+                    challenges posed by such terrains. Their services often include construction, design, repair, and
+                    custom solutions aimed at enhancing the comfort and safety of homes in these areas.
+
+                </div>
+                <center><h1 class="my-3" style="color: rgb(8, 234, 72);">Photo gallary:</h1></center>
+                <div class="gallary">
+                    <div class="row1">
+                        <div class="box">
+                            <img class="imgg" src="static/pic1.avif" alt="">
+                        </div>
+                        <div class="box">
+                            <img class="imgg" src="static/pic2.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img class="imgg" src="static/pic3.jpeg" alt="">
+                        </div>
+                        <div class="box">
+                            <img class="imgg" src="static/pic4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="box">
+                            <img class="imgg" src="static/pic5.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img class="imgg" src="static/pic6.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img class="imgg" src="static/pic4.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img class="imgg" src="static/pic3.jpeg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+               
+
+
+            </div>
+            <div class="contacme">
+                <div class="contact-container">
+                    <h1 class="headcontac">Contact Us</h1>
+                    <div class="mycontac">
+                        <b>pahari home solutions</b>
+                    </div>
+                    <form id="contact-form" action="/" method="POST">
+                        <label for="name" style="background-color: #211d21;">Name:</label>
+                        <input type="text" id="name" name="name" required
+                            style="background-color: #211d21; color: white;">
+
+                        <label for="email" style="background-color: #211d21;">Email:</label>
+                        <input type="email" id="email" name="email" required
+                            style="background-color: #211d21; color: white;">
+
+                        <label for="email" style="background-color: #211d21;">phone:</label>
+                        <input type="text" id="phone" name="phone" required
+                            style="background-color: #211d21; color: white;">
+
+                        <label for="message" style="background-color: #211d21;">Message:</label>
+                        <textarea id="message" name="message" rows="5" required
+                            style="background-color: #211d21; color: white;"></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="skill">
+            <h3>Home Construction & Renovation:</h3> <h5>  Pahari Home Solutions is a company that deals with construction
+                of homes from scratch as well as undertake remodeling services to meet modern architectural requirements
+                in hilly and mountains regions.</h5>
+
+
+
+            <h3>Home Maintenance:</h3> <h5>  Provides basic cleaning works such as general repairs, check-ups, and
+                upgrades as a way of extending the life and the durability of homes.</h5>
+
+
+
+            <h3>Eco-friendly Solutions:</h3> <h5>  Offers green Building Supplies that includes green Building Supplies
+                for homes in order to lessen the effects of the home's impact on the environment.</h5>
+
+
+
+            <h3>Interior & Exterior Design:</h3> <h5>  Interiors decoration and exteriors for homes so as to improve the
+                worth, utility, and comfort of the houses as desired by clients.</h5>
+
+
+
+            <h3>Consultation & Planning:</h3> <h5>  Gives professional consultancy and services to the people who are
+                planning to construct/builder new houses or want to embark on renovations of the existing structures to
+                handle problems associate with steep slope</h5>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="static/script.js"></script>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+
+</html>

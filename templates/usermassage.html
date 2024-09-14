@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usre messages Table</title>
+    <link rel="shortcut icon" href="static/Profile.png" type="image/x-icon">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="usertable">
+    <table>
+
+        <tbody>
+            <thead>
+                <tr>
+                    <th>SNo</th>
+                    <th>User name</th>
+                    <th>User mail</th>
+                    <th>User phone</th>
+                    <th>User messages</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            {% for user in alluserinput %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.usermail}}</td>
+                <td>{{user.userphone}}</td>
+                <td>{{user.usermassage}}</td>
+                <td class="justify"><a href="/delete/{{user.sno}}"><button class="btn btn-danger">Delete</button></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    
+</body>
+</html>
