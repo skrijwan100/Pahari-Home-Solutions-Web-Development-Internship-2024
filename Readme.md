@@ -4,7 +4,7 @@
 
 
 ## Frist active the env "pahari_home_solution" then run app.py 
-## if youn want to use admin login you should homesolustion@gmail.com this main and pahari123 this password. If you login admin page you see the all user submit massage.
+## if youn want to use admin login you should homesolustion@gmail.com this mail and pahari123 this password. If you login admin page you see the all user submit massage.
 
 ## Live site:
 <img src="static/webpic.png">
