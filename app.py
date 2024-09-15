@@ -39,7 +39,7 @@ def adminlogin():
         amail=request.form['mail']
         apassword=request.form['pass']
         # alluserinput=Details.query.all()
-        if(amail=="pahari@gmail.com" and apassword=="1234"):
+        if(amail=="homesolustion@gmail.com" and apassword=="pahari123"):
             return redirect("/usertable")
         else:
             return "admin is wrong"
