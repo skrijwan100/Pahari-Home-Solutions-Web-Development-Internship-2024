@@ -31,7 +31,7 @@ def index():
         db.session.commit()
         flash("successfuly sumbmit your massage")
     alluserinput=Details.query.all()
-    print(alluserinput)
+    # print(alluserinput)
     return render_template("index.html")
 @app.route('/adminlogin',methods=['POST','GET'])
 def adminlogin():
